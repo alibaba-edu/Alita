@@ -1,5 +1,5 @@
-#include "duty_cycle.h"
-#include "init.h" 
+#include "lib/duty_cycle.h"
+#include "lib/init.h" 
 int main()
 {
     init();

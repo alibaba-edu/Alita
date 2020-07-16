@@ -1,5 +1,5 @@
-#include "duty_cycle.h"
-#include "vm_status.h"
+#include "lib/duty_cycle.h"
+#include "lib/vm_status.h"
 #include <bits/stdc++.h>
 #include <unistd.h>
 using namespace std;

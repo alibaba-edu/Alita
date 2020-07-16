@@ -1,4 +1,4 @@
-#include "mem_contention_iso.h"
+#include "lib/mem_contention_iso.h"
 
 int main()
 {

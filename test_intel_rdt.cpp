@@ -1,4 +1,4 @@
-#include "intel_rdt.h"
+#include "lib/intel_rdt.h"
 
 int main()
 {

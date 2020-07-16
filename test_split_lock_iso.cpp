@@ -1,6 +1,6 @@
-#include "split_lock_iso.h"
-#include "init.h"
-#include "utility.h"
+#include "lib/split_lock_iso.h"
+#include "lib/init.h"
+#include "lib/utility.h"
 
 int main()
 {
