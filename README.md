@@ -1,4 +1,4 @@
-# OpenAlita
+# Alita
 This repository contains the source code for a research paper that was submitted for publication at the International Conference for [High Performance Computing, Networking, Storage, and Analysis](https://sc20.supercomputing.org/) (SC20). 
 
 ## How to run
