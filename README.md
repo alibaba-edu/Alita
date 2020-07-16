@@ -11,9 +11,11 @@ This repository contains the source code for a research paper that was submitted
 
     g++ test_mem_contention_iso.cpp -o test_mem_contention_iso && sudo ./test_mem_contention_iso
 
-- Power isolation
+- Power Isolation
 
     g++ test_power_iso.cpp -o test_power_iso && sudo ./test_power_iso
+	or
+	g++ test_power_iso_beta.cpp -o test_power_iso_beta && sudo ./test_power_iso_beta
 
 
 ## License
