@@ -16,12 +16,7 @@ This repository contains the source code for a research paper that was submitted
     g++ test_power_iso.cpp -o test_power_iso && sudo ./test_power_iso
 	or
 	g++ test_power_iso_beta.cpp -o test_power_iso_beta && sudo ./test_power_iso_beta
-
-
-## License
-
-[MIT](/LICENCE)
-
+	
 ## Contributors
 
 	Shuai Xue <xueshuai@sjtu.edu.cn>
@@ -31,3 +26,18 @@ This repository contains the source code for a research paper that was submitted
 	Shanpei Chen <shanpeic@linux.alibaba.com>
 	Yu Xu <xuyu@linux.alibaba.com>
 	Zhen Ren <renzhen@linux.alibaba.com>
+
+## Acknowledgement 
+Benchmarks in our paper:
+- [Parsec Suite](https://parsec.cs.princeton.edu/)
+- [TailBench Suite](http://tailbench.csail.mit.edu/)
+- [Cachebench](http://icl.cs.utk.edu/llcbench/cachebench.html)
+- [Mprime](https://www.mersenne.org/download/)
+- [Linpack](https://www.top500.org/project/linpack/)
+
+
+## License
+
+[MIT](/LICENCE)
+
+
