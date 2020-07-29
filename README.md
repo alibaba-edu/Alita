@@ -40,14 +40,17 @@ We are releasing code to isolate resources on a server with Intel Xeon Platinum 
 
 ### Build Benchmarks
 
-To perform the fine-grain exploration on the effects of various resource contentions, we use three programs that generate frequent split locks, use large LLC space, and consume high power as the `resource polluters` (`bus polluter`, `LLC polluter`, and `power polluter`):
+To perform the fine-grain exploration on the effects of various resource contentions, we use three programs that generate frequent split locks, use large LLC space, and consume high power as the `resource polluters` (`bus polluter`, `LLC polluter`, and `power polluter`), 
 
 - `Bus polluter`: [splitlock](./splitlock.c)
 - `LLC polluter`: [Cachebench V2.1](http://icl.cs.utk.edu/llcbench/cachebench.html)
 - `Power polluter`: [Mprime v29.8,build 6](https://www.mersenne.org/download/)
+
+Linpack is used for temperature measurement of the cores when they execute a high-power program.
+
 - [Linpack V1.0.0](https://www.top500.org/project/linpack/)
 
-To evaluate Alta, we use representative workloads from **Parsec benchmark suite** and **TailBench** that includes both the scientific workloads and latency-sensitive Internet services as the benchmarks. Parsec focuses on emerging workloads and was designed to be representative of shared-memory programs for multiprocessors. Tailbench focuses on emerging user-facing Internet services that have stringent latency requirement.  *Xpian* (xp) and *shore* (sh) in the TailBench are web service and database workloads that are widely-used in real Clouds. We choose these benchmarks to reveal the real-system workloads.
+To evaluate Alita, we use representative workloads from **Parsec benchmark suite** and **TailBench** that includes both the scientific workloads and latency-sensitive Internet services as the benchmarks. Parsec focuses on emerging workloads and was designed to be representative of shared-memory programs for multiprocessors. Tailbench focuses on emerging user-facing Internet services that have stringent latency requirement.  *Xpian* (xp) and *shore* (sh) in the TailBench are web service and database workloads that are widely-used in real Clouds. We choose these benchmarks to reveal the real-system workloads. 
 
 - [Parsec Suite V2.1](https://parsec.cs.princeton.edu/)
 - [TailBench Suite V0.9](http://tailbench.csail.mit.edu/)
