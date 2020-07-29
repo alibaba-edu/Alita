@@ -44,8 +44,8 @@ To perform the fine-grain exploration on the effects of various resource content
 
 - `Bus polluter`: [splitlock](./splitlock.c)
 - `LLC polluter`: [Cachebench V2.1](http://icl.cs.utk.edu/llcbench/cachebench.html)
-- `Power polluter`: [Mprime](https://www.mersenne.org/download/)
-- [Linpack](https://www.top500.org/project/linpack/)
+- `Power polluter`: [Mprime v29.8,build 6](https://www.mersenne.org/download/)
+- [Linpack V1.0.0](https://www.top500.org/project/linpack/)
 
 To evaluate Alta, we use representative workloads from **Parsec benchmark suite** and **TailBench** that includes both the scientific workloads and latency-sensitive Internet services as the benchmarks. Parsec focuses on emerging workloads and was designed to be representative of shared-memory programs for multiprocessors. Tailbench focuses on emerging user-facing Internet services that have stringent latency requirement.  *Xpian* (xp) and *shore* (sh) in the TailBench are web service and database workloads that are widely-used in real Clouds. We choose these benchmarks to reveal the real-system workloads.
 
@@ -214,6 +214,27 @@ Log in attacker
     sudo ssh -p <PORT_attacker> root@localhost
 
 Before using mprime as a power polluter process, we need to configure parameters first. In this experiment, we use 44 vcpus to run mprime multithreading in the attacker VM, and 4 vcpus in the victim VM.
+
+Edit linpack
+
+    cd linpack
+
+    vim lininput_xeon64
+        1 # number of tests
+        45000 # problem sizes
+        45000 # leading dimensions
+        1000 # times to run a test
+        1 # alignment values (in KBytes)
+
+    vim run.sh
+        arch=xeon64
+        {
+            taskset -ac 0-43 ./xlinpack_$arch lininput_$arch
+        }
+    
+Run linpack
+
+    ./run.sh
 
 Edit mprime
 
